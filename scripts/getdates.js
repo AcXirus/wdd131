@@ -6,7 +6,7 @@ if (footerParagraph) {
   footerParagraph.textContent = `© ${currentYear} || Dillan Torres || Ecuador `;
 }
 
-
+//alert(document.lastModified);
 let nLastModif = Date.parse(document.lastModified);
 let readableDate = new Date(nLastModif);
 
