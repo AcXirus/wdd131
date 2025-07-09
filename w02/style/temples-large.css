@@ -1,0 +1,32 @@
+/* ===============================
+   Large Screens
+   =============================== */
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  /* Show nav always on large screens */
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .navigation li a{
+    background: rgba(119, 180, 26, 0.445);
+  }
+
+  /* Hide menu button on large screens */
+  #menu {
+    display: none;
+  }
+}
