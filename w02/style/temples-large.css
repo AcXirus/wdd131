@@ -3,6 +3,11 @@
    =============================== */
 
 @media screen and (min-width: 768px) {
+  
+  *{
+    transition: all 0.5s ease;
+  }
+  
   header {
     display: flex;
     justify-content: space-between;
@@ -29,4 +34,45 @@
   #menu {
     display: none;
   }
+
+  /* ===============================
+   Body
+   =============================== */
+   
+  .container {
+  display:grid; 
+  grid-template-columns: 1.5fr 1.5fr 1.5fr;
+  grid-gap: 5px;
+  place-items: center;
+  margin: 5px;
+  padding: 10px;
+  }
+
+  .imge {
+    font-weight: 700;
+    border-bottom: 1px solid #777; 
+    margin-bottom: 1rem;
+  }
+
+  figure {
+    background-color:#fff;
+  }
+
+  img { 
+    width: 20rem auto;
+    height: 20rem auto;
+    transition: ttransform 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95); 
+    margin: .5rem;
+  }
+
+  figcaption {
+    font-size: smaller;
+    text-align: center;
+  }
+
+  /* hover effect */
+  .hover:hover {
+    box-shadow: 0 0 50px #333;
+  }
+
 }
