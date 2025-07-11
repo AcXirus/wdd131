@@ -11,8 +11,7 @@ if (footerParagraph) {
 const nLastModif = Date.parse(document.lastModified);
 const readableDate = new Date(nLastModif);
 
-document.getElementById("lastModified").textContent =
-  "Last Modification: " + readableDate.toLocaleString();
+document.getElementById("lastModified").textContent = "Last Modification: " + readableDate.toLocaleString();
 
 
 const menuButton = document.getElementById('menu');
