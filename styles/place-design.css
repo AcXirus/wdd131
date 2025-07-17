@@ -1,0 +1,117 @@
+:root {
+  --blue: #0055a4;
+  --white: #ffffff;
+  --red: #ef4135;
+  --dark-blue: #002B5B;
+  --bg-gradient: linear-gradient(to right, #0055a4b9, #ffffffc2, #ef4135ab);
+  --text: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Times New Roman', Times, serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5px 10px;
+}
+
+header.title {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 1.5rem 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.container {
+  margin-top: 1rem;
+}
+.container img {
+  width: 420px;
+  height: 550px;
+  border: 1px solid var(--dark-blue);
+  border-radius: 12px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5px;
+  padding: 1rem;
+  max-width: 900px;
+  width: 95%;
+}
+
+.data, .Weathercon {
+  background-color: rgba(255,255,255,0.85);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.data h1, .Weathercon h1 {
+  margin-bottom: 1rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+/* 👇 Pseudoelemento con ícono para clima */
+.Weathercon h1::after {
+  content: " ⛅";
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+/* 👇 Si quieres mostrar el ícono SOLO en pantallas grandes */
+@media (max-width: 600px) {
+  .Weathercon h1::after {
+    content: ""; /* Oculta el ícono en pantallas pequeñas */
+  }
+}
+
+.data div, .Weathercon p {
+  margin: 0.5rem 0;
+}
+
+.Weathercon p {
+  text-align: center;
+}
+
+label {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 5px;
+  padding: 1rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+footer .last {
+  font-style: italic;
+}
