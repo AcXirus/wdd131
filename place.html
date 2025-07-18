@@ -1,73 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place - WDD131</title>
-    <link rel="stylesheet" href="styles/place-design.css">
-    <link rel="stylesheet" href="styles/place-large-design.css">
-    <script src="scripts/place.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place - WDD131</title>
+  <link rel="stylesheet" href="styles/place-large-design.css">
+  <link rel="stylesheet" href="styles/place-design.css" />
+  <script src="scripts/place.js" defer></script>
 </head>
 <body class="page">
-    <header class="title">
-        <h1>Paris</h1>
-    </header>
-        <div class="container">
-            <picture>
-                <source srcset="images/NotreDam-Large-View.webp" media="(min-width: 768px)">
-                <img src="images/Torre-Eifel-Mobil-View.webp" alt="Torre-Eifel-Mobil-View" width="500" height="250">
-            </picture>
-        </div>
-    <main>
-        <div class="data">
-            <h1>Data</h1>
+  <header class="title">
+    <h1>Paris</h1>
+  </header>
 
-            <div>
-                <label><strong>Full Name:</strong></label> Paris (in French: Paris)
-            </div>
-            <div>
-                <label><strong>Country:</strong></label> France
-            </div>
-            <div>
-                <label><strong>Population:</strong></label> ~2.1 million (urban area ~11 million, estimated 2025)
-            </div>
-            <div>
-                <label><strong>Area:</strong></label> ~105 km² (central city)
-            </div>
-            <div>
-                <label><strong>Region:</strong></label> Île-de-France
-            </div>
-            <div>
-                <label><strong>Nickname:</strong></label> The City of Light (La Ville Lumière)
-            </div>
-            <div>
-                <label><strong>Official Language:</strong></label> French
-            </div>
-            <div>
-                <label><strong>Famous Landmarks:</strong></label> Eiffel Tower, Arc de Triomphe, Notre Dame, Sacré-Cœur, Louvre
-            </div>
-            <div>
-                <label><strong>Main River:</strong></label> Seine River
-            </div>
-            <div>
-                <label><strong>Famous Universities:</strong></label> Sorbonne, Sciences Po, ENS, HEC
-            </div>
-            <div>
-                <label><strong>Main Museums:</strong></label> Louvre, Orsay, Pompidou
-            </div>
-        </div>
-        <section class="Weather" id="Weather">
-                <h1>Weather</h1>
-                <img src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="Weather-logo" width="100" height="100">
-                <p>Temperature: 10°c</p>
-                <p>Condition: Partly Cloudy</p>
-                <p>Wind: 5km/h</p>
-                <p>Wind Chill: <span id="windChill"></span></p>        
-        </section>
-    </main>
-    <footer>
-        <p id="copyright-year"></p>
-        <p class="last"><strong id="lastModified"></strong></p>
-    </footer>
+  <main>
+    <div class="container">
+      <picture>
+        <source srcset="images/NotreDam-Large-View.webp" media="(min-width: 768px)" />
+        <img src="images/Torre-Eifel-Mobil-View.webp" alt="Torre Eiffel" />
+      </picture>
+    </div>
+
+    <section class="data">
+      <h2>Data</h2>
+      <div><label><strong>Full Name:</strong></label> Paris (in French: Paris)</div>
+      <div><label><strong>Country:</strong></label> France</div>
+      <div><label><strong>Population:</strong></label> ~2.1 million (urban area ~11 million, estimated 2025)</div>
+      <div><label><strong>Area:</strong></label> ~105 km² (central city)</div>
+      <div><label><strong>Region:</strong></label> Île-de-France</div>
+      <div><label><strong>Nickname:</strong></label> The City of Light (La Ville Lumière)</div>
+      <div><label><strong>Official Language:</strong></label> French</div>
+      <div><label><strong>Famous Landmarks:</strong></label> Eiffel Tower, Arc de Triomphe, Notre Dame, Sacré-Cœur, Louvre</div>
+      <div><label><strong>Main River:</strong></label> Seine River</div>
+      <div><label><strong>Famous Universities:</strong></label> Sorbonne, Sciences Po, ENS, HEC</div>
+      <div><label><strong>Main Museums:</strong></label> Louvre, Orsay, Pompidou</div>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <img src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="Weather icon" />
+      <p>Temperature: 10°c</p>
+      <p>Condition: Partly Cloudy</p>
+      <p>Wind: 5km/h</p>
+      <p>Wind Chill: <span id="windChill"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="copyright-year"></p>
+    <p class="last"><strong id="lastModified"></strong></p>
+  </footer>
 </body>
 </html>
