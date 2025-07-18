@@ -20,6 +20,7 @@
     top: 60%;
   }
 
+  /* Adding Weather Icon */
   .weather h2::after {
     content: " ⛅";
     color: var(--blue);

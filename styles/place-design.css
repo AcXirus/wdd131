@@ -13,6 +13,7 @@
   box-sizing: border-box;
 }
 
+/* Body */
 html, body {
   font-family: 'Times New Roman', Times, serif;
   color: var(--text);
