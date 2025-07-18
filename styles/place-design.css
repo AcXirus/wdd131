@@ -3,8 +3,9 @@
   --white: #ffffff;
   --red: #ef4135;
   --dark-blue: #002B5B;
-  --bg-gradient: linear-gradient(to right, #0055a4b9, #ffffffc2, #ef4135ab);
   --text: #222;
+  --bg-gradient: linear-gradient(to right, #0055a4b9, #ffffffc2, #ef4135ab);
+
 }
 
 * {
@@ -15,25 +16,22 @@
 
 html, body {
   font-family: 'Times New Roman', Times, serif;
-  background: var(--bg-gradient);
   color: var(--text);
+  background: var(--bg-gradient);
 }
 
 .page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   min-height: 100vh;
-  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 header.title {
-  background-color: var(--dark-blue);
-  color: var(--white);
-  padding: 1.5rem 0;
-  width: 100%;
   text-align: center;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #ffffff;
+  color: var(--white);
+  background-color: var(--dark-blue);
 }
 
 .title h1 {
@@ -42,33 +40,47 @@ header.title {
 }
 
 .container {
-  margin-top: 1rem;
+  margin-top: 5px;
+  display:grid; 
+  grid-template-columns: 1.5fr;
+  grid-gap: 20px;
+  place-items: center;
+  margin: 5px auto;
+  padding: 20px auto;
 }
 .container img {
-  width: 420px;
-  height: 550px;
+  width: 480px;
+  height: 600px;
   border: 1px solid var(--dark-blue);
   border-radius: 12px;
+  padding: 1rem;
+}
+
+.Weather img { 
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  margin: .5rem;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5px;
+  gap: 20px;
   padding: 1rem;
-  max-width: 900px;
-  width: 95%;
+  width: 100%;
 }
 
-.data, .Weathercon {
-  background-color: rgba(255,255,255,0.85);
+.data, .Weather {
+  background-color: rgba(255, 255, 255, 0.301);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.466);
   text-align: center;
+  width: 100%;
 }
 
-.data h1, .Weathercon h1 {
+
+.data h1, .Weather h1 {
   margin-bottom: 1rem;
   color: var(--blue);
   text-transform: uppercase;
@@ -76,31 +88,23 @@ main {
   position: relative;
 }
 
-/* 👇 Pseudoelemento con ícono para clima */
-.Weathercon h1::after {
+label {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.Weather h1::after {
   content: " ⛅";
   font-size: 1.5rem;
   color: var(--blue);
 }
 
-/* 👇 Si quieres mostrar el ícono SOLO en pantallas grandes */
-@media (max-width: 600px) {
-  .Weathercon h1::after {
-    content: ""; /* Oculta el ícono en pantallas pequeñas */
-  }
+.data div, .Weather p {
+  margin: 0.5rem;
 }
 
-.data div, .Weathercon p {
-  margin: 0.5rem 0;
-}
-
-.Weathercon p {
+.Weather p {
   text-align: center;
-}
-
-label {
-  color: var(--dark-blue);
-  font-weight: bold;
 }
 
 footer {
@@ -114,4 +118,10 @@ footer {
 }
 footer .last {
   font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .Weather h1::after {
+    content: "";
+  }
 }

@@ -18,22 +18,22 @@ const windSpeedMph = 5
 
 function calculateWindChill(temperatureF, windspeedMph) {
     return (
-        35.74 + 
-        0.6215 * temperatureF - 
-        35.75 * (windSpeedMph ^ 0.16) + 
-        0.4275 * temperatureF * (windSpeedMph ^ 0.16)
+    35.74 +
+    0.6215 * temperatureF -
+    35.75 * Math.pow(windSpeedMph, 0.16) +
+    0.4275 * temperatureF * Math.pow(windSpeedMph, 0.16)
     ).toFixed(1);
 }
 
 function displayWindChill() {
-    const windChillElement = getElementById("windchill");
+    const windChillElement = document.getElementById("windChill");
 
     if (temperatureF <= 50 && windSpeedMph > 3) {
         const chill = calculateWindChill(temperatureF, windSpeedMph);
-        windChillElement.textContent = "${chill} °F";
+        windChillElement.textContent = `${chill} °F`;
     } else {
         windChillElement.textContent = "N/A";
     }
 }
 
-window.addEventListener(load, displayWindChill);
+displayWindChill()
