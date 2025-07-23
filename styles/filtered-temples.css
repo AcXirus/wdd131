@@ -1,0 +1,126 @@
+/* ===============================
+   Base Styles (Mobile First)
+   =============================== */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigation List - Mobile Menu Hidden by Default */
+.navigation {
+  display: none;              /* Hidden by default on mobile */
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.navigation li a {
+  color: #fff;
+  text-decoration: none;
+  background: #555;
+  padding: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+.navigation li a:hover {
+  background: #c71d1d71;
+}
+
+/* ===============================
+   Mobile Menu Button
+   =============================== */
+
+#menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff; /* Same color as header text */
+  margin-top: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.25rem;
+}
+
+/* Hamburger icon */
+#menu::before {
+  content: "☰";
+}
+
+/* Close icon when menu is open */
+#menu.open::before {
+  content: "✖";
+}
+
+/* Show nav when menu is open */
+#menu.open + .navigation {
+  display: flex;
+}
+
+/* ===============================
+   Body
+   =============================== */
+.res-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  place-items: center;
+}
+
+.res-grid section {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.res-grid section:hover {
+  transform: translateY(-5px);
+}
+
+.res-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* hover effect */
+.hover:hover {
+  box-shadow: 0 0 50px #333;
+}
+
+footer {
+  background-color: #333; 
+  color: #fff;
+  padding: 1rem; 
+  text-align: center;
+}
+

@@ -1,0 +1,83 @@
+/* ===============================
+   Large Screens
+   =============================== */
+
+@media screen and (min-width: 768px) {
+  
+  *{
+    transition: all 0.5s ease;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  /* Show nav always on large screens */
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .navigation li a{
+    background: rgba(119, 180, 26, 0.445);
+  }
+
+  /* Hide menu button on large screens */
+  #menu {
+    display: none;
+  }
+
+  /* ===============================
+   Body
+   =============================== */
+   
+  .res-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .res-grid section {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+  .res-grid section:hover {
+    transform: translateY(-5px);
+  }
+
+  .res-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  img { 
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95); 
+    margin: .5rem;
+  }
+
+  figcaption {
+    font-size: smaller;
+    text-align: center;
+  }
+
+  /* hover effect */
+  .hover:hover {
+    box-shadow: 0 0 50px #333;
+  }
+
+}
