@@ -89,6 +89,7 @@ header h1 {
   gap: 1rem;
   padding: 1rem;
   place-items: center;
+  text-align: center;
 }
 
 .res-grid section {
@@ -104,6 +105,7 @@ header h1 {
 
 .res-grid section:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 35px #000000a8;
 }
 
 .res-grid img {
