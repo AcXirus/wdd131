@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form - WDD131</title>
+        <link rel="stylesheet" href="styles/form.css">
+        <script src="scripts/form.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Product Review</h1>
+        </header>
+        <main>
+            <form method="get" action="rewiew.html" class="tb1">
+                <fieldset>
+                    <div>Product Name*</div>
+                    <select name="Product" id="Products" required>
+                        <option value="" disabled selected>Choose a Product ...</label>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <div>Overall Rating*</div>
+                    <label><input type="radio" name="rating" value="One Star" required>☆</label>
+                    <label><input type="radio" name="rating" value="Two Star" required>☆☆</label>
+                    <label><input type="radio" name="rating" value="Three Start" required>☆☆☆</label>
+                    <label><input type="radio" name="rating" value="Four Start" required>☆☆☆☆</label>
+                    <label><input type="radio" name="rating" value="Five Start" required>☆☆☆☆☆</label>
+                </fieldset>
+
+                <fieldset>
+                    <div>Date of Installation*</div>
+                    <input type="date" name="install date" id="instdate" required>
+                </fieldset>
+
+                <fieldset>
+                    <div>Which features did you find useful in the product?</div>
+                    <div>(Check all that apply)</div>
+                    <label><input type="checkbox" name="durability" value="yes" 
+                        id="durability" >Durability</label>
+                    <label><input type="checkbox" name="ease" value="yes" 
+                        id="ease" >Ease of Use</label>
+                    <label><input type="checkbox" name="performance" value="yes" 
+                        id="performance" >Performance</label>
+                    <label><input type="checkbox" name="design" value="yes" 
+                        id="design" >Design</label>
+                </fieldset>
+
+
+                <fieldset>
+                    <div>Written Review (optional)</div>
+                    <label for="review"><textarea name="Product Review" id="review" rows="4" cols="50"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <div>Your Name (optional)</div>
+                    <label><input type="text" name="people name" id="name"></label>
+                </fieldset>
+
+                <input type="submit" value="Post Review">
+
+            </form>
+        </main>
+    </body>
+    <footer>
+        <p id="copyright-year"></p>
+        <strong><p class="last" id="lastModified"></p></strong>
+    </footer>
+</html>
