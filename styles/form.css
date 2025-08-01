@@ -48,21 +48,33 @@ main p {
     border-radius: 6px;
 }
 
-.tb1 div {
-    padding: .3rem;
+.tb1 label.titulo {
+    padding: 0.3rem;
     color: #344ba9;
-    font-size: .8rem;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
-.tb1 label {
+.tb1 label:not(.titulo) {
     padding: 1rem;
     color: #000000;
-    font-size: .8rem;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.tb1 label.radio-label,
+.tb1 label.checkbox-label {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    color: #000000;
+    padding: 0; 
 }
 
 .tb1 input[type="text"],
-.tb1 input[type="date"]
-{
+.tb1 input[type="date"],
+.tb1 textarea {
     background-color: #eee;
     display: block;
     border: solid 1px #999;
@@ -75,13 +87,11 @@ main p {
 }
 
 .tb1 input[type="radio"],
-.tb1 input[type="checkbox"]
-{
+.tb1 input[type="checkbox"] {
     margin-right: .5rem;
 }
 
-.tb1 input[type="submit"]
-{
+.tb1 input[type="submit"] {
     border: none;
     color: #344ba9;
     border-radius: 6px;
@@ -89,7 +99,6 @@ main p {
     width: 100%;
     max-width: 400px;
     box-shadow: 1px 1px 4px #999;
-    
 }
 
 .tb1 input:required {
@@ -116,11 +125,19 @@ footer {
         margin-bottom: .5rem;
     }
 
-    .tb1 label,
-    .tb1 div {
-        display: block;
-        margin-bottom: 0.8rem;
+    .tb1 label.titulo {
         font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .tb1 label:not(.titulo) {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    .tb1 label.radio-label,
+    .tb1 label.checkbox-label {
+        margin-right: 1rem;
     }
 
     .tb1 input[type="radio"],

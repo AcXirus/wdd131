@@ -9,65 +9,78 @@
         <meta name="description" content="Submit your review of our products. Rate features, installation date, and share your experience.">
         <meta name="Author" content="Dillan Torres">
     </head>
-    <body>
-        <header>
-            <h1>Product Review</h1>
-        </header>
-        <main>
-            <form method="get" action="review.html" class="tb1">
-                <fieldset>
-                    <label for="Products">Product Name*</label>
-                    <select name="Product" id="Products" required>
-                        <option value="" disabled selected>Choose a Product ...</option>
-                    </select>
-                </fieldset>
+   <body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  <main>
+    <form method="get" action="review.html" class="tb1">
 
-                <fieldset>
-                    <div>Overall Rating*</div>
-                    <label><input type="radio" name="rating" value="One Star" required>☆</label>
-                    <label><input type="radio" name="rating" value="Two Star" required>☆☆</label>
-                    <label><input type="radio" name="rating" value="Three Start" required>☆☆☆</label>
-                    <label><input type="radio" name="rating" value="Four Start" required>☆☆☆☆</label>
-                    <label><input type="radio" name="rating" value="Five Start" required>☆☆☆☆☆</label>
-                </fieldset>
+      <fieldset>
+        <label class="titulo" for="Products">Product Name*</label>
+        <select name="Product" id="Products" required>
+          <option value="" disabled selected>Choose a Product ...</option>
+        </select>
+      </fieldset>
 
-                <fieldset>
-                    <label for="instdate">Date of Installation*</label>
-                    <input type="date" name="install date" id="instdate" required>
-                </fieldset>
+      <fieldset>
+        <label class="titulo">Overall Rating*</label>
+        <label class="radio-label">
+          <input type="radio" name="rating" value="One Star" required />☆
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="rating" value="Two Star" required />☆☆
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="rating" value="Three Star" required />☆☆☆
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="rating" value="Four Star" required />☆☆☆☆
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="rating" value="Five Star" required />☆☆☆☆☆
+        </label>
+      </fieldset>
 
-                <fieldset>
-                    <div>Which features did you find useful in the product?</div>
-                    <div>(Check all that apply)</div>
-                    <label><input type="checkbox" name="durability" value="yes" 
-                        id="durability" >Durability</label>
-                    <label><input type="checkbox" name="ease" value="yes" 
-                        id="ease" >Ease of Use</label>
-                    <label><input type="checkbox" name="performance" value="yes" 
-                        id="performance" >Performance</label>
-                    <label><input type="checkbox" name="design" value="yes" 
-                        id="design" >Design</label>
-                </fieldset>
+      <fieldset>
+        <label class="titulo" for="instdate">Date of Installation*</label>
+        <input type="date" name="install_date" id="instdate" required />
+      </fieldset>
 
+      <fieldset>
+        <label class="titulo">Which features did you find useful in the product?
+            (Check all that apply)
+        </label>
+        <label class="checkbox-label" for="durability">
+          <input type="checkbox" name="durability" value="yes" id="durability" />Durability
+        </label>
+        <label class="checkbox-label" for="ease">
+          <input type="checkbox" name="ease" value="yes" id="ease" />Ease of Use
+        </label>
+        <label class="checkbox-label" for="performance">
+          <input type="checkbox" name="performance" value="yes" id="performance" />Performance
+        </label>
+        <label class="checkbox-label" for="design">
+          <input type="checkbox" name="design" value="yes" id="design" />Design
+        </label>
+      </fieldset>
 
-                <fieldset>
-                    <label for="review">Written Review (optional)</label>
-                    <textarea name="Product Review" id="review" rows="4" cols="50"></textarea>
-                </fieldset>
+      <fieldset>
+        <label class="titulo" for="review">Written Review (optional)</label>
+        <textarea name="product_review" id="review" rows="4" cols="50"></textarea>
+      </fieldset>
 
-                <fieldset>
-                   <label for="name">Your Name (optional)</label>
-                    <input type="text" name="people name" id="name">
-                </fieldset>
+      <fieldset>
+        <label class="titulo" for="name">Your Name (optional)</label>
+        <input type="text" name="people_name" id="name" />
+      </fieldset>
 
-                <input type="submit" value="Post Review">
-
-            </form>
-        </main>
-        <footer>
-            <p id="copyright-year"></p>
-            <p class="last"><strong id="lastModified"></strong></p>
-
-        </footer>
-    </body>
+      <input type="submit" value="Post Review" />
+    </form>
+  </main>
+  <footer>
+    <p id="copyright-year"></p>
+    <p class="last" id="lastModified"></p>
+  </footer>
+</body>
 </html>
