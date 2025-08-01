@@ -36,6 +36,10 @@ main p {
     margin-top: 12rem;
 }
 
+.count {
+    text-align: center;
+}
+
 .tb1 fieldset {
     margin: .2rem;
     padding: .5rem 2%;
@@ -101,4 +105,40 @@ footer {
     background-color: #abdf93;
     padding: .5rem 2%;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .tb1 fieldset {
+        padding: .5rem 3%;
+        margin-bottom: .5rem;
+    }
+
+    .tb1 label,
+    .tb1 div {
+        display: block;
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .tb1 input[type="radio"],
+    .tb1 input[type="checkbox"] {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+
+    .tb1 input[type="submit"] {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .tb1 textarea {
+        width: 100%;
+        max-width: 600px;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
 }

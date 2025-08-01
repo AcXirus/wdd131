@@ -6,8 +6,10 @@ if (footerParagraph) {
 
 const nLastModif = Date.parse(document.lastModified);
 const readableDate = new Date(nLastModif);
-
-document.getElementById("lastModified").textContent = "Last Modification: " + readableDate.toLocaleString();
+const lastMod = document.getElementById("lastModified");
+if (lastMod) {
+  lastMod.textContent = "Last Modification: " + readableDate.toLocaleString();
+}
 
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -18,7 +20,6 @@ const products = [
 ];
 
 const productSelect = document.getElementById("Products");
-
 if (productSelect) {
   products.forEach(product => {
     const option = document.createElement("option");
