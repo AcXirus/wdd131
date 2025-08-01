@@ -16,7 +16,7 @@
         <main>
             <form method="get" action="review.html" class="tb1">
                 <fieldset>
-                    <div>Product Name*</div>
+                    <label for="Products">Product Name*</label>
                     <select name="Product" id="Products" required>
                         <option value="" disabled selected>Choose a Product ...</option>
                     </select>
@@ -32,7 +32,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <div>Date of Installation*</div>
+                    <label for="instdate">Date of Installation*</label>
                     <input type="date" name="install date" id="instdate" required>
                 </fieldset>
 
@@ -51,13 +51,13 @@
 
 
                 <fieldset>
-                    <div>Written Review (optional)</div>
-                    <label for="review"><textarea name="Product Review" id="review" rows="4" cols="50"></textarea></label>
+                    <label for="review">Written Review (optional)</label>
+                    <textarea name="Product Review" id="review" rows="4" cols="50"></textarea>
                 </fieldset>
 
                 <fieldset>
-                    <div>Your Name (optional)</div>
-                    <label for="name"><input type="text" name="people name" id="name"></label>
+                   <label for="name">Your Name (optional)</label>
+                    <input type="text" name="people name" id="name">
                 </fieldset>
 
                 <input type="submit" value="Post Review">
