@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Form - WDD131</title>
+        <title>Product Review - WDD131</title>
         <link rel="stylesheet" href="styles/form.css">
         <script src="scripts/form.js" defer></script>
+        <meta name="description" content="Submit your review of our products. Rate features, installation date, and share your experience.">
+        <meta name="Author" content="Dillan Samuel Torres Flor">
     </head>
     <body>
         <header>
@@ -14,9 +16,9 @@
         <main>
             <form method="get" action="review.html" class="tb1">
                 <fieldset>
-                    <div>Product Name*</div>
+                    <div><label for="products">Product Name*</label></div>
                     <select name="Product" id="Products" required>
-                        <option value="" disabled selected>Choose a Product ...</label>
+                        <option value="" disabled selected>Choose a Product ...</option>
                     </select>
                 </fieldset>
 
@@ -50,21 +52,22 @@
 
                 <fieldset>
                     <div>Written Review (optional)</div>
-                    <label for="review"><textarea name="Product Review" id="review" rows="4" cols="50"></textarea>
+                    <label for="review"><textarea name="Product Review" id="review" rows="4" cols="50"></textarea></label>
                 </fieldset>
 
                 <fieldset>
                     <div>Your Name (optional)</div>
-                    <label><input type="text" name="people name" id="name"></label>
+                    <label for="name"><input type="text" name="people name" id="name"></label>
                 </fieldset>
 
                 <input type="submit" value="Post Review">
 
             </form>
         </main>
+        <footer>
+            <p id="copyright-year"></p>
+            <p class="last"><strong id="lastModified"></strong></p>
+
+        </footer>
     </body>
-    <footer>
-        <p id="copyright-year"></p>
-        <strong><p class="last" id="lastModified"></p></strong>
-    </footer>
 </html>
