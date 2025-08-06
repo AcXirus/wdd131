@@ -5,28 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exploring the Volcanoes of Ecuador</title>
   <link rel="stylesheet" href="styles/volcanoes.css">
+  <link rel="stylesheet" href="styles/volcanoes-small-view.css">
   <script src="scripts/volcanoes.js" defer></script>
+  <meta name="Description" content="You will know about us our mission and our purpose, do you should like to know more about Ecuador and it's volcanoes?.">
+  <meta name="Author" content="Dillan Samuel Torres">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Exploring the Volcanoes of Ecuador</h1>
-    <nav>
+    <h1 class="logo">Exploring the Volcanoes of Ecuador</h1>
+    <button id="menu">☰</button>
+    <nav class="navigation">
       <a href="index.html">Home</a>
       <a href="volcanoes.html">Volcanoes</a>
       <a href="referencias.html">References</a>
     </nav>
   </header>
+  <main class="intro-section">
+    <section class="purpose">
+      <h2>Our Mission</h2>
+      <p>
+        Ecuador is home to some of the most magnificent and active volcanoes in the world.
+        From snow-capped peaks to simmering craters, each volcano holds a story of ancient power and natural wonder.
+        Our mission is to guide you through these geological marvels — to understand their origins, appreciate their beauty,
+        and respect the powerful forces that shape our planet. Join us as we explore the landscapes that define Ecuador’s unique identity.
+      </p>
+    </section>
 
-  <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>This site introduces the natural beauty and power of Ecuador's volcanoes.</p>
+    <div class="project-image">
+      <img id="logo" src="images/Picture-Volcano-View1.webp" alt="Volcanoes Pricture" loading="lazy">
+    </div>
+
+  <section class="scenario">
+    <h2>What Will You Discover?</h2>
+    <div class="qa-grid">
+      <div class="qa-item">
+        <button class="question">How tall is Cotopaxi compared to Chimborazo?</button>
+        <p class="answer">Chimborazo is taller in absolute height (6,263 m), but Cotopaxi (5,897 m) is one of the highest active volcanoes in the world.</p>
+      </div>
+      <div class="qa-item">
+        <button class="question">Which volcano is still active today?</button>
+        <p class="answer">Cotopaxi and Tungurahua are among Ecuador’s active volcanoes, with Cotopaxi erupting as recently as 2023.</p>
+      </div>
+      <div class="qa-item">
+        <button class="question">What makes Ecuador's volcanoes unique?</button>
+        <p class="answer">Ecuador's volcanoes are part of the Ring of Fire and are located near the equator, combining tropical and high-altitude environments.</p>
+      </div>
+      <div class="qa-item">
+        <button class="question">Can you hike to the summit of Tungurahua?</button>
+        <p class="answer">It used to be possible, but due to its active status and safety concerns, hiking is now restricted or prohibited depending on activity levels.</p>
+      </div>
+      <div class="qa-item">
+        <button class="question">What legends surround the volcanoes of the Andes?</button>
+        <p class="answer">Local legends say that mountains like Tungurahua and Chimborazo are living spirits, often depicted in romantic or warrior tales.</p>
+      </div>
+      <div class="qa-item">
+        <button class="question">How do volcanic eruptions shape the land and lives around them?</button>
+        <p class="answer">They create fertile soils, shape landscapes, but also pose threats to local communities due to ashfall and lava flows.</p>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="get-started">
+      <h3>Are you ready to start this journey with us?</h3>
+      <a href="volcanoes.html" class="start-button">Lest's Go!</a>
     </section>
   </main>
 
   <footer>
-        <p id="copyright-year"></p>
-        <strong><p class="last" id="lastModified"></p></strong>
+    <p id="copyright-year"></p>
+    <strong><p class="last" id="lastModified"></p></strong>
   </footer>
 </body>
 </html>

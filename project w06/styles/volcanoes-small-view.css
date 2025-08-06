@@ -1,0 +1,74 @@
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navigation a {
+    margin: 10px 0;
+  }
+
+  .intro-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "purpose"
+      "scenario"
+      "get-started";
+    padding: 1rem;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .purpose {
+  max-width: 600px;
+  }
+
+  .purpose,
+  .scenario,
+  .get-started {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .qa-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .start-button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #menu {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation a {
+    margin: 10px 0;
+  }
+}
