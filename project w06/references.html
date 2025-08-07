@@ -3,48 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>References</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Ecuador Volcanoes</title>
+  <link rel="stylesheet" href="styles/volcanoes.css">
+  <link rel="stylesheet" href="styles/volcanoes-small-view.css">
+  <script src="scripts/volcanoes.js" defer></script>
+  <meta name="Description" content="Here, you can find all imformation about volcanoes and references that i used, also this page use a html form, in which, you can fill and give me a review.">
+  <meta name="Author" content="Dillan Samuel Torres">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>References and Feedback</h1>
-    <nav>
+    <h1 class="logo">References and Feedback</h1>
+    <button id="menu">☰</button>
+    <nav class="navigation">
       <a href="index.html">Home</a>
-      <a href="volcanoes.html">Volcanoes</a>
-      <a href="referencias.html">References</a>
+      <a href="home-volcanoes.html">About Us</a>
+      <a href="volcanoes.html">References</a>
     </nav>
   </header>
 
-  <main>
-    <section>
+  <main class="refs-and-form">
+    <div class="container-refs">
       <h2>References</h2>
-      <ul>
-        <li>Wikipedia: Cotopaxi</li>
-        <li>Instituto Geofísico del Ecuador</li>
-        <li>National Geographic: Volcanoes</li>
+      <h3>About Volcanoes</h3>
+      <ul class="link-a">
+        <li><a href="https://es.wikipedia.org/wiki/Reventador" target="_blank">Wikipedia: Reventador</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Tungurahua" target="_blank">Wikipedia: Tungurahua</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Cotopaxi" target="_blank">Wikipedia: Cotopaxi</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Sangay" target="_blank">Wikipedia: Sangay</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Pichincha" target="_blank">Wikipedia: Pichincha</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Chimborazo" target="_blank">Wikipedia: Chimborazo</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Cayambe" target="_blank">Wikipedia: Cayambe</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Antisana" target="_blank">Wikipedia: Antisana</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Pululahua" target="_blank">Wikipedia: Pululahua</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Wolf" target="_blank">Wikipedia: Wolf</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Sierra_Negra_(Ecuador)" target="_blank">Wikipedia: Sierra Negra</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Isla_Fernandina" target="_blank">Wikipedia: Fernandina Island</a></li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+      <h3>Supporting Volcano Pages</h3>
+      <ul>
+        <li><a href="https://www.volcanesdelecuador.com/" target="_blank">Volcanoes of Ecuador</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Anexo:Volcanes_de_Ecuador" target="_blank">List of Volcanoes in Ecuador</a></li>
+      </ul>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <h3>Programming Guides</h3>
+      <ul>
+        <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">W3Schools: JavaScript Introduction</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form" target="_blank">MDN: HTML Form Reference</a></li>
+      </ul>
+    </div>
+    <section class="container-form">
+      <div class="feedback-form">
+        <h2>Volcano Information Feedback</h2>
+        <form id="feedback-form">
+          <label for="info-rating">How useful was the volcano information?</label><br>
+          <select id="info-rating" name="info-rating" required>
+            <option value="">-- Select --</option>
+            <option value="very-helpful">Very helpful</option>
+            <option value="helpful">Helpful</option>
+            <option value="neutral">Neutral</option>
+            <option value="not-helpful">Not helpful</option>
+          </select><br><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+          <label for="feedback">Additional comments:</label><br>
+          <textarea id="feedback" name="feedback" rows="4" required></textarea><br>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit">Send Feedback</button>
+        </form>
+      </div>
+      <div class="contact-us-form">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="4" required></textarea><br>
+
+          <label for="confirmation">Type "Confirm" to validate your message:</label><br>
+          <input type="text" id="confirmation" name="confirmation" required><br><br>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>  
     </section>
   </main>
 
   <footer>
-    <p>2025 Volcano Explorer</p>
+    <p id="copyright-year"></p>
+    <strong><p class="last" id="lastModified"></p></strong>
   </footer>
 </body>
 </html>

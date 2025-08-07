@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecuador Volcanoes</title>
-  <link rel="stylesheet" href="styles/logo-welcome.css">
-  <script src="scripts/welcome.js" defer></script>
-  <meta name="Description" content="This page content the logo and navegation information also give a welcome to the users.">
+  <link rel="stylesheet" href="styles/volcanoes.css">
+  <link rel="stylesheet" href="styles/volcanoes-small-view.css">
+  <script src="scripts/volcanoes.js" defer></script>
+  <meta name="Description" content="This page content a picture about each volcano that have Ecuador, also this page have a code by js with a filter, and brief iformation about volcanoes.">
   <meta name="Author" content="Dillan Samuel Torres">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+</head>
 <body>
   <header>
-    <h1>Ecuador Volcanoes</h1>
-    <nav>
+    <h1 class="logo">Exploring the Volcanoes of Ecuador</h1>
+    <button id="menu">☰</button>
+    <nav class="navigation">
       <a href="index.html">Home</a>
       <a href="home-volcanoes.html">About Us</a>
-      <a href="referencias.html">References</a>
+      <a href="references.html">References</a>
     </nav>
   </header>
 
-  <main id="volcano-list">
-    <!-- Volcano cards will be injected here by JavaScript -->
+  <div class="volcano-filters">
+    <button id="high">Highest</button>
+    <button id="low">Lowest</button>
+    <select id="regionFilter">
+      <option value="all">All Regions</option>
+      <option value="Sierra">Sierra</option>
+      <option value="Oriente">Oriente</option>
+      <option value="Costa">Costa</option>
+      <option value="Galápagos">Galápagos</option>
+    </select>
+  </div>
+
+  <main id="volcanoContainer" class="volcano-grid">
   </main>
 
   <footer>
