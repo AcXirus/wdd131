@@ -239,8 +239,6 @@ if (feedbackForm) {
   });
 }
 
-
-
 const contactForm = document.getElementById("contact-form");
 if (contactForm) 
   {
