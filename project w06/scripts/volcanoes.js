@@ -189,6 +189,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const low = document.querySelector("#low");
   const regionFilter = document.querySelector("#regionFilter");
 
+  if (!high || !low || !regionFilter) {
+    return;
+  }
+
   high.addEventListener("click", () => {
     const filtered = Volcanoes.filter(v => v.height > 3500);
     createVolcanoCard(filtered);
@@ -237,29 +241,33 @@ if (feedbackForm) {
 
 
 
-document.getElementById("contact-form").addEventListener("submit", function (e) { e.preventDefault();
+const contactForm = document.getElementById("contact-form");
+if (contactForm) 
+  {
+    contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const confirmation = document.getElementById("confirmation").value.trim().toLowerCase();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const confirmation = document.getElementById("confirmation").value.trim().toLowerCase();
+    if (confirmation !== "confirm") {
+      alert("Please type 'Confirm' to submit the form.");
+      return;
+    }
 
-  if (confirmation !== "confirm") {
-    alert("Please type 'Confirm' to submit the form.");
-    return;
-  }
+    const contactData = {
+      name: name,
+      email: email,
+      message: message,
+      date: new Date().toISOString()
+    };
 
-  const contactData = {
-    name: name,
-    email: email,
-    message: message,
-    date: new Date().toISOString()
-  };
+    let contactList = JSON.parse(localStorage.getItem("contactMessages")) || [];
+    contactList.push(contactData);
+    localStorage.setItem("contactMessages", JSON.stringify(contactList));
 
-  let contactList = JSON.parse(localStorage.getItem("contactMessages")) || [];
-  contactList.push(contactData);
-  localStorage.setItem("contactMessages", JSON.stringify(contactList));
-
-  alert("It has been sent. Thank you for sharing your opinion.");
-  this.reset();
-});
+    alert("It has been sent. Thank you for sharing your opinion.");
+    this.reset();
+  });
+}
