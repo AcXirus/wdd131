@@ -18,19 +18,23 @@ if (lastMod) {
 /* I will add a code to change 
 the princture every 4 seconds*/
 
-    const logo = document.getElementById("logo");
-    const images = [
-        "images/Picture-Volcano-View1.webp",
-        "images/Picture-Volcano-View2.webp",
-        "images/Picture-Volcano-View3.webp"
-    ];
+const logo = document.getElementById("logo");
+const images = [
+  "images/Picture-Volcano-View1.webp",
+  "images/Picture-Volcano-View2.webp",
+  "images/Picture-Volcano-View3.webp"
+];
 
-    let index = 0;
+let index = 0;
 
-    setInterval(() => {
-      index = (index + 1) % images.length;
-      logo.src = images[index];
-    }, 4000);
+if (!logo) {
+  return;
+}
+    
+setInterval(() => {
+  index = (index + 1) % images.length;
+  logo.src = images[index];
+}, 4000);
 
 
 /* I will add a code to show and hide 
