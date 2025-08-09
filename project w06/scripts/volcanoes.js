@@ -147,8 +147,6 @@ const Volcanoes = [
   }
 ]
 
-createVolcanoCard(Volcanoes);
-
 function createVolcanoCard(volcanoesList) {
   const container = document.querySelector("#volcanoContainer");
   if (!container) return;
@@ -173,6 +171,8 @@ function createVolcanoCard(volcanoesList) {
     img.setAttribute("src", volcano.imageUrl);
     img.setAttribute("alt", volcano.name);
     img.setAttribute("loading", "lazy");
+    img.setAttribute("width", "400");
+    img.setAttribute("height", "250");
 
     card.appendChild(name);
     card.appendChild(location);
@@ -187,6 +187,9 @@ function createVolcanoCard(volcanoesList) {
 /* filter for high, low and regions */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  createVolcanoCard(Volcanoes);
+
   const high = document.querySelector("#high");
   const low = document.querySelector("#low");
   const regionFilter = document.querySelector("#regionFilter");
