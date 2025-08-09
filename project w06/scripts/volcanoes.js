@@ -19,22 +19,20 @@ if (lastMod) {
 the princture every 4 seconds*/
 
 const logo = document.getElementById("logo");
-const images = [
-  "images/Picture-Volcano-View1.webp",
-  "images/Picture-Volcano-View2.webp",
-  "images/Picture-Volcano-View3.webp"
-];
+if (logo) {
+  const images = [
+    "images/Picture-Volcano-View1.webp",
+    "images/Picture-Volcano-View2.webp",
+    "images/Picture-Volcano-View3.webp"
+  ];
 
-let index = 0;
-
-if (!logo) {
-  return;
-}
-    
-setInterval(() => {
+  let index = 0;
+  setInterval(() => {
   index = (index + 1) % images.length;
   logo.src = images[index];
-}, 4000);
+  }, 4000);
+}
+    
 
 
 /* I will add a code to show and hide 
@@ -175,8 +173,6 @@ function createVolcanoCard(volcanoesList) {
     img.setAttribute("src", volcano.imageUrl);
     img.setAttribute("alt", volcano.name);
     img.setAttribute("loading", "lazy");
-    img.setAttribute("width", "400");
-    img.setAttribute("height", "250");
 
     card.appendChild(name);
     card.appendChild(location);
