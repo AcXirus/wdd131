@@ -175,6 +175,8 @@ function createVolcanoCard(volcanoesList) {
     img.setAttribute("src", volcano.imageUrl);
     img.setAttribute("alt", volcano.name);
     img.setAttribute("loading", "lazy");
+    img.setAttribute("width", "400");
+    img.setAttribute("height", "250");
 
     card.appendChild(name);
     card.appendChild(location);

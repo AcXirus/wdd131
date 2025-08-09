@@ -109,12 +109,16 @@ header {
 }
 
 .project-image img {
-  width: 380px;
-  height: 320px;
   border-radius: 12px;
   border: 1px solid #ccc4cc;
   box-shadow: 0 4px 12px rgba(197, 168, 168, 0.445);
   margin-bottom: 2rem;
+}
+
+#logo {
+  width: 380px;
+  height: 320px;
+  object-fit: cover;
 }
 
 .scenario {
