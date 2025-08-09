@@ -145,8 +145,11 @@ const Volcanoes = [
   }
 ]
 
+createVolcanoCard(Volcanoes);
+
 function createVolcanoCard(volcanoesList) {
   const container = document.querySelector("#volcanoContainer");
+  if (!container) return;
   container.innerHTML = "";
 
   volcanoesList.forEach(volcano => {
@@ -178,14 +181,13 @@ function createVolcanoCard(volcanoesList) {
     container.appendChild(card);
   });
 }
+
 /* filter for high, low and regions */
 
 document.addEventListener("DOMContentLoaded", () => {
   const high = document.querySelector("#high");
   const low = document.querySelector("#low");
   const regionFilter = document.querySelector("#regionFilter");
-
-  createVolcanoCard(Volcanoes);
 
   high.addEventListener("click", () => {
     const filtered = Volcanoes.filter(v => v.height > 3500);
@@ -210,12 +212,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ------------- References and Feedback HTML -------------- */
 /* Requiered form */
-document.getElementById("feedback-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+const feedbackForm = document.getElementById("feedback-form");
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
   const rating = document.getElementById("info-rating").value;
   const comments = document.getElementById("feedback").value;
-
+  
   const feedbackData = {
     rating: rating,
     comments: comments,
@@ -228,10 +232,12 @@ document.getElementById("feedback-form").addEventListener("submit", function (e)
 
   alert("It has been sent. Thank you for sharing your opinion.");
   this.reset();
-});
+  });
+}
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+
+
+document.getElementById("contact-form").addEventListener("submit", function (e) { e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
